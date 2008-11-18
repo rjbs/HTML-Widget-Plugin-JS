@@ -11,4 +11,3 @@ is(
   $factory->js_vars({ a => [ 1, 2, 3 ], b => { x => 10 } }),
   "js_vars and js_var are equiv",
 );
-
