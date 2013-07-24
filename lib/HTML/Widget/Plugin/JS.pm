@@ -10,11 +10,11 @@ HTML::Widget::Plugin::JS - a JavaScript variable declaration emitter
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =cut
 
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 use Data::JavaScript::Anon;
 

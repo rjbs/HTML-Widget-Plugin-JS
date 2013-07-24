@@ -1,7 +1,10 @@
 Changelog for HTML-Widget-Plugin-JS
 
-0.002    2008-09-15
-         fix abstract
+0.003     2013-07-24
+          skip a test that won't pass easily on 5.18.0+
 
-0.001    2008-09-22
-         first release
+0.002     2008-09-15
+          fix abstract
+
+0.001     2008-09-22
+          first release
