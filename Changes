@@ -1,10 +1,13 @@
 Changelog for HTML-Widget-Plugin-JS
 
+{{$NEXT}}
+        - repackage, update bugtracker and repo
+
 0.003     2013-07-24
-          skip a test that won't pass easily on 5.18.0+
+        - skip a test that won't pass easily on 5.18.0+
 
 0.002     2008-09-15
-          fix abstract
+        - fix abstract
 
 0.001     2008-09-22
-          first release
+        - first release

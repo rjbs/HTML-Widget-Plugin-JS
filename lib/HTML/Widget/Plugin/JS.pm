@@ -1,20 +1,8 @@
 use strict;
 use warnings;
-
 package HTML::Widget::Plugin::JS;
-use base qw(HTML::Widget::Plugin);
-
-=head1 NAME
-
-HTML::Widget::Plugin::JS - a JavaScript variable declaration emitter
-
-=head1 VERSION
-
-version 0.003
-
-=cut
-
-our $VERSION = '0.003';
+use parent qw(HTML::Widget::Plugin);
+# ABSTRACT: a JavaScript variable declaration emitter
 
 use Data::JavaScript::Anon;
 
@@ -46,7 +34,7 @@ In otherwords, this widget:
 
 sub js_vars {
   my ($self, $factory, $arg) = @_;
-  
+
   my $str =
     join "\n",
     map  { Data::JavaScript::Anon->var_dump($_ => $arg->{$_}) }
@@ -70,17 +58,5 @@ sub js_anon {
 
   Data::JavaScript::Anon->anon_dump($arg);
 }
-
-
-=head2 AUTHOR
-
-This code was written by Ricardo SIGNES.
-
-=head2 COPYRIGHT
-
-This code is copyright (c) 2008, Ricardo SIGNES.  It is free software,
-available under the same terms as perl itself.
-
-=cut
 
 1;
