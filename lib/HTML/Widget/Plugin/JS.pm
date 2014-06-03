@@ -1,8 +1,9 @@
 use strict;
 use warnings;
 package HTML::Widget::Plugin::JS;
-use parent qw(HTML::Widget::Plugin);
 # ABSTRACT: a JavaScript variable declaration emitter
+
+use parent qw(HTML::Widget::Plugin);
 
 use Data::JavaScript::Anon;
 

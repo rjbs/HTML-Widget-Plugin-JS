@@ -3,8 +3,11 @@ use warnings;
 use Test::More tests => 2;
 
 use HTML::Widget::Factory;
+use HTML::Widget::Plugin::JS;
 
-my $factory = HTML::Widget::Factory->new;
+my $factory = HTML::Widget::Factory->new({
+  extra_plugins => [ 'HTML::Widget::Plugin::JS' ],
+});
 
 ok(1);
 
