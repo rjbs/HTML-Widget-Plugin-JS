@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package HTML::Widget::Plugin::JS;
+
 # ABSTRACT: a JavaScript variable declaration emitter
 
 use parent qw(HTML::Widget::Plugin);
@@ -67,7 +68,8 @@ sub js_anon {
 }
 
 {
-  package HTML::Widget::Plugin::JS::Encoder;
+  package
+    HTML::Widget::Plugin::JS::Encoder;
   use parent 'Data::JavaScript::Anon';
 
   sub _escape {
