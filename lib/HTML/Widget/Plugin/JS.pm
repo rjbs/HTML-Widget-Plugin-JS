@@ -38,7 +38,7 @@ sub js_vars {
 
   my $str =
     join "\n",
-    map  { Data::JavaScript::Anon->var_dump($_ => $arg->{$_}) }
+    map  { HTML::Widget::Plugin::JS::Encoder->var_dump($_ => $arg->{$_}) }
     keys %$arg;
 
   return $str;
@@ -52,12 +52,30 @@ This widget converts a given data structure to an anonymous JavaScript
 structure.  This basically just provides a widget factory interface to
 Data::JavaScript::Anon.
 
+It also escapes end-tag-like content in strings, using a JavaScript C<\u003c>
+form to avoid being interpreted as a real end tag in JavaScript embedded in
+HTML.
+
+Software is terrible.
+
 =cut
 
 sub js_anon {
   my ($self, $factory, $arg) = @_;
 
-  Data::JavaScript::Anon->anon_dump($arg);
+  HTML::Widget::Plugin::JS::Encoder->anon_dump($arg);
+}
+
+{
+  package HTML::Widget::Plugin::JS::Encoder;
+  use parent 'Data::JavaScript::Anon';
+
+  sub _escape {
+    my ($self, $text) = @_;
+    $text = $self->SUPER::_escape($text);
+    $text =~ s/</\\u003c/g;
+    return $text;
+  }
 }
 
 1;
