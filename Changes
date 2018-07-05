@@ -1,6 +1,8 @@
 Changelog for HTML-Widget-Plugin-JS
 
 {{$NEXT}}
+
+0.007     2018-07-05 12:10:52-04:00 America/New_York
         - arrayrefs and other data can be passed through to js_anon
 
 0.006     2018-06-15 10:18:26-04:00 America/New_York
