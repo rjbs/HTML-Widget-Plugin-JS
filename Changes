@@ -1,6 +1,7 @@
 Changelog for HTML-Widget-Plugin-JS
 
 {{$NEXT}}
+        - arrayrefs and other data can be passed through to js_anon
 
 0.006     2018-06-15 10:18:26-04:00 America/New_York
         - escape "</" when it appears in a string, because if this is for HTML

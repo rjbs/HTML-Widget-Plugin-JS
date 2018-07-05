@@ -13,6 +13,8 @@ sub provided_widgets { qw(js_var js_vars js_anon) }
 sub boolean_args {}
 sub attribute_args {}
 
+sub rewrite_arg { return $_[1] }
+
 =head2 js_var
 
 =head2 js_vars
